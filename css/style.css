@@ -12,3 +12,6 @@
 .menu-toggle {
   transition: all 0.3s ease;
 }
+.service-card:hover .service-icon {
+  filter: drop-shadow(0 0 12px rgba(0, 247, 255, 0.4));
+}
