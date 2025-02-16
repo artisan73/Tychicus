@@ -5,11 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TYCHICUS - Enterprise Cybersecurity Solutions</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link href="/css/style.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
 <body class="cyber-gradient text-gray-100 font-sans">
-    <!-- Navigation -->
     <nav class="container mx-auto px-6 py-4">
         <div class="flex items-center justify-between">
             <div class="flex items-center">
@@ -23,7 +22,6 @@
                 <span class="text-2xl font-bold ml-2 neon-cyan">TYCHICUS</span>
             </div>
 
-            <!-- Desktop Navigation -->
             <div class="hidden md:flex space-x-8">
                 <a href="index.html" class="hover:text-cyan-400 transition">Home</a>
                 <a href="#services" class="hover:text-cyan-400 transition">Services</a>
@@ -31,13 +29,11 @@
                 <a href="#contact" class="hover:text-cyan-400 transition">Contact</a>
             </div>
 
-            <!-- Mobile Menu Button -->
             <button id="mobile-menu-button" class="md:hidden text-cyan-400 hover:text-cyan-300">
                 <span class="text-3xl">=</span>
             </button>
         </div>
 
-        <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden absolute top-20 left-0 w-full bg-gray-900 z-50">
             <div class="container mx-auto px-6 py-4">
                 <div class="flex flex-col space-y-4">
@@ -50,19 +46,12 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section id="home" class="container mx-auto px-6 py-20">
         <div class="flex flex-col md:flex-row items-center">
             <div class="md:w-1/2">
-                <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-                    Secure Your Digital Infrastructure
-                </h1>
-                <p class="text-xl mb-8 text-gray-400">
-                    Enterprise-grade cybersecurity solutions and network protection
-                </p>
-                <button class="bg-cyan-600 hover:bg-cyan-700 text-white px-8 py-3 rounded-lg transition-all transform hover:scale-105">
-                    Schedule Security Audit
-                </button>
+                <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">Secure Your Digital Infrastructure</h1>
+                <p class="text-xl mb-8 text-gray-400">Enterprise-grade cybersecurity solutions and network protection</p>
+                <button class="bg-cyan-600 hover:bg-cyan-700 text-white px-8 py-3 rounded-lg transition-all transform hover:scale-105">Schedule Security Audit</button>
             </div>
             <div class="md:w-1/2 mt-12 md:mt-0">
                 <lottie-player
@@ -76,14 +65,12 @@
         </div>
     </section>
 
-    <!-- Services Section -->
     <section id="services" class="py-20 bg-black bg-opacity-50">
         <div class="container mx-auto px-6">
             <h2 class="text-4xl font-bold mb-16 text-center neon-cyan">Our Services</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Networking Card -->
                 <div class="bg-gray-900 p-8 rounded-xl transform transition-all hover:-translate-y-2 hover:shadow-2xl hover:shadow-cyan-900/20">
-                    <div class="service-icon mb-6">
+                    <div class="mb-6">
                         <lottie-player
                             src="https://assets9.lottiefiles.com/packages/lf20_2cwDXD.json"
                             background="transparent"
@@ -101,11 +88,47 @@
                     </ul>
                 </div>
 
-                <!-- Other services -->
+                <div class="bg-gray-900 p-8 rounded-xl transform transition-all hover:-translate-y-2 hover:shadow-2xl hover:shadow-cyan-900/20">
+                    <div class="mb-6">
+                        <lottie-player
+                            src="https://assets1.lottiefiles.com/packages/lf20_5tkzkblw.json"
+                            background="transparent"
+                            speed="1"
+                            style="width: 80px; height: 80px"
+                            loop autoplay>
+                        </lottie-player>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Cybersecurity</h3>
+                    <p class="text-gray-400 mb-4">Comprehensive digital protection solutions</p>
+                    <ul class="space-y-2 text-cyan-400">
+                        <li>• Threat Monitoring</li>
+                        <li>• Incident Response</li>
+                        <li>• Compliance Management</li>
+                    </ul>
+                </div>
+
+                <div class="bg-gray-900 p-8 rounded-xl transform transition-all hover:-translate-y-2 hover:shadow-2xl hover:shadow-cyan-900/20">
+                    <div class="mb-6">
+                        <lottie-player
+                            src="https://assets2.lottiefiles.com/private_files/lf30_obidsi0t.json"
+                            background="transparent"
+                            speed="1"
+                            style="width: 80px; height: 80px"
+                            loop autoplay>
+                        </lottie-player>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Penetration Testing</h3>
+                    <p class="text-gray-400 mb-4">Real-world security vulnerability testing</p>
+                    <ul class="space-y-2 text-cyan-400">
+                        <li>• Red Team Exercises</li>
+                        <li>• Vulnerability Assessment</li>
+                        <li>• Security Audits</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
-    <!-- Trust Section -->
+
     <section class="py-20">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
@@ -119,33 +142,20 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact" class="py-20 bg-black bg-opacity-50">
         <div class="container mx-auto px-6">
             <div class="max-w-2xl mx-auto">
                 <h2 class="text-4xl font-bold mb-8 text-center neon-cyan">Contact Us</h2>
                 <form class="space-y-6">
-                    <div>
-                        <input type="text" placeholder="Name" 
-                               class="w-full bg-gray-900 rounded-lg p-4 focus:ring-2 focus:ring-cyan-500 outline-none">
-                    </div>
-                    <div>
-                        <input type="email" placeholder="Email" 
-                               class="w-full bg-gray-900 rounded-lg p-4 focus:ring-2 focus:ring-cyan-500 outline-none">
-                    </div>
-                    <div>
-                        <textarea rows="5" placeholder="Message" 
-                               class="w-full bg-gray-900 rounded-lg p-4 focus:ring-2 focus:ring-cyan-500 outline-none"></textarea>
-                    </div>
-                    <button class="w-full bg-cyan-600 hover:bg-cyan-700 text-white px-8 py-4 rounded-lg transition-all">
-                        Send Message
-                    </button>
+                    <div><input type="text" placeholder="Name" class="w-full bg-gray-900 rounded-lg p-4 focus:ring-2 focus:ring-cyan-500 outline-none"></div>
+                    <div><input type="email" placeholder="Email" class="w-full bg-gray-900 rounded-lg p-4 focus:ring-2 focus:ring-cyan-500 outline-none"></div>
+                    <div><textarea rows="5" placeholder="Message" class="w-full bg-gray-900 rounded-lg p-4 focus:ring-2 focus:ring-cyan-500 outline-none"></textarea></div>
+                    <button class="w-full bg-cyan-600 hover:bg-cyan-700 text-white px-8 py-4 rounded-lg transition-all">Send Message</button>
                 </form>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="bg-black py-12">
         <div class="container mx-auto px-6 text-center text-gray-400">
             <p>&copy; 2023 TYCHICUS. All rights reserved.</p>
@@ -156,6 +166,7 @@
             </div>
         </div>
     </footer>
-    <script src="/javascript/script.js"></script>
+
+    <script src="javascript/script.js"></script>
 </body>
 </html>
