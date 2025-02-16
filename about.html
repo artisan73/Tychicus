@@ -5,20 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About US - Cybersecurity Experts</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-    <style>
-        .cyber-gradient {
-            background: linear-gradient(135deg, #0a1929 0%, #020c1b 100%);
-        }
-        .neon-cyan {
-            color: #00f7ff;
-            text-shadow: 0 0 10px rgba(0, 247, 255, 0.5);
-        }
-        .team-card:hover .member-image {
-            transform: scale(1.05);
-            transition: transform 0.3s ease;
-        }
-    </style>
+    <script src="/javascript/script.js"></script>
 </head>
 <body class="cyber-gradient text-gray-100 font-sans">
     <nav class="container mx-auto px-6 py-4">
@@ -33,11 +22,30 @@
                 </lottie-player>
                 <span class="text-2xl font-bold ml-2 neon-cyan">TYCHICUS</span>
             </div>
+
+            <!-- Desktop-->
             <div class="hidden md:flex space-x-8">
                 <a href="index.html" class="hover:text-cyan-400 transition">Home</a>
                 <a href="index.html#services" class="hover:text-cyan-400 transition">Services</a>
                 <a href="about.html" class="text-cyan-400">About</a>
                 <a href="index.html#contact" class="hover:text-cyan-400 transition">Contact</a>
+            </div>
+
+            <!-- Mobile -->
+            <button id="mobile-menu-button" class="md:hidden text-cyan-400 hover:text-cyan-300 menu-toggle">
+                <span class="text-3xl">=</span>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden absolute top-20 left-0 w-full bg-gray-900 z-50">
+            <div class="container mx-auto px-6 py-4">
+                <div class="flex flex-col space-y-4">
+                    <a href="index.html" class="text-gray-300 hover:text-cyan-400">Home</a>
+                    <a href="index.html#services" class="text-gray-300 hover:text-cyan-400">Services</a>
+                    <a href="about.html" class="text-gray-300 hover:text-cyan-400">About</a>
+                    <a href="index.html#contact" class="text-gray-300 hover:text-cyan-400">Contact</a>
+                </div>
             </div>
         </div>
     </nav>
@@ -45,21 +53,31 @@
     <!-- About Content -->
     <main class="container mx-auto px-6 py-16">
         <!-- Mission & Vision -->
-        <section class="grid md:grid-cols-2 gap-12 mb-20">
-            <div class="bg-gray-900 p-8 rounded-xl border border-cyan-800">
-                <h2 class="text-3xl font-bold mb-6 neon-cyan">Our Mission</h2>
-                <p class="text-gray-400 leading-relaxed">
-                    To empower organizations with enterprise-grade cybersecurity solutions through proactive defense strategies 
-                    and cutting-edge network protection, ensuring business continuity in an evolving threat landscape.
-                </p>
-            </div>
+        <section class="grid md:grid-cols-2 gap-12 mb-20 relative">
+            <div class="space-y-12">
+                <!-- Mission -->
+                <div class="bg-gray-900 p-8 rounded-xl transform transition-all hover:-translate-y-2">
+                    <div class="mb-6">
+                        <span class="text-3xl font-bold text-gray-100">OUR</span>
+                        <span class="text-4xl font-bold neon-cyan">MISSION</span>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed text-lg">
+                        To empower organizations with enterprise-grade cybersecurity solutions through proactive defense strategies 
+                        and cutting-edge network protection, ensuring business continuity in an evolving threat landscape.
+                    </p>
+                </div>
 
-            <div class="bg-gray-900 p-8 rounded-xl border border-cyan-800">
-                <h2 class="text-3xl font-bold mb-6 neon-cyan">Our Vision</h2>
-                <p class="text-gray-400 leading-relaxed">
-                    To redefine global cybersecurity standards through innovation and expertise, becoming the trusted partner 
-                    for Fortune 500 companies and emerging enterprises alike in their digital transformation journeys.
-                </p>
+                <!-- Vision -->
+                <div class="bg-gray-900 p-8 rounded-xl transform transition-all hover:-translate-y-2">
+                    <div class="mb-6">
+                        <span class="text-3xl font-bold text-gray-100">OUR</span>
+                        <span class="text-4xl font-bold neon-cyan">VISION</span>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed text-lg">
+                        To redefine global cybersecurity standards through innovation and expertise, becoming the trusted partner 
+                        for Fortune 500 companies and emerging enterprises alike in their digital transformation journeys.
+                    </p>
+                </div>
             </div>
         </section>
 
@@ -95,24 +113,10 @@
                         </p>
                     </div>
                 </div>
-
-                <!-- Team Member 3
-
-                <div class="team-card bg-gray-900 rounded-xl overflow-hidden hover:shadow-2xl hover:shadow-cyan-900/20 transition-all">
-                    <div class="member-image overflow-hidden">
-                        <img src="images/.jpg" alt="avartar" class="w-full h-64 object-cover">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-1"></h3>
-                        <p class="text-cyan-400 text-sm mb-4">Network Architect</p>
-                        <p class="text-gray-400 text-sm">
-                            CCIE, JNCIE certified. Designed secure networks for Fortune 500 companies since 2010.
-                        </p>
-                    </div>
-                </div>-->
             </div>
         </section>
     </main>
+
     <footer class="bg-black py-12">
         <div class="container mx-auto px-6 text-center text-gray-400">
             <p>&copy; 2023 TYCHICUS. All rights reserved.</p>
@@ -124,5 +128,31 @@
         </div>
     </footer>
 
+    <script>
+        // Mobile menu toggle with icon change
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            const isOpen = mobileMenu.classList.toggle('hidden');
+            mobileMenuButton.innerHTML = isOpen ? '<span class="text-3xl">=</span>' : '<span class="text-3xl">×</span>';
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (event) => {
+            if (!mobileMenu.contains(event.target) && !mobileMenuButton.contains(event.target)) {
+                mobileMenu.classList.add('hidden');
+                mobileMenuButton.innerHTML = '<span class="text-3xl">=</span>';
+            }
+        });
+
+        // Close menu on link click
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenuButton.innerHTML = '<span class="text-3xl">=</span>';
+            });
+        });
+    </script>
 </body>
 </html>
