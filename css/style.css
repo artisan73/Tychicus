@@ -11,3 +11,8 @@
         text-shadow: 0 0 10px rgba(0, 247, 255, 0.5);
     }
 }
+#home{
+    background-image: url('/images/cybersecurity2.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
