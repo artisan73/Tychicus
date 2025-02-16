@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About US - Cybersecurity Experts</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <style>
+        .cyber-gradient {
+            background: linear-gradient(135deg, #0a1929 0%, #020c1b 100%);
+        }
+        .neon-cyan {
+            color: #00f7ff;
+            text-shadow: 0 0 10px rgba(0, 247, 255, 0.5);
+        }
+        .team-card:hover .member-image {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+    </style>
+</head>
+<body class="cyber-gradient text-gray-100 font-sans">
+    <nav class="container mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+            <div class="flex items-center">
+                <lottie-player
+                    src="https://assets2.lottiefiles.com/packages/lf20_uzk78jgg.json"
+                    background="transparent"
+                    speed="1"
+                    style="width: 50px; height: 50px"
+                    loop autoplay>
+                </lottie-player>
+                <span class="text-2xl font-bold ml-2 neon-cyan">TYCHICUS</span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="hover:text-cyan-400 transition">Home</a>
+                <a href="index.html#services" class="hover:text-cyan-400 transition">Services</a>
+                <a href="about.html" class="text-cyan-400">About</a>
+                <a href="index.html#contact" class="hover:text-cyan-400 transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Content -->
+    <main class="container mx-auto px-6 py-16">
+        <!-- Mission & Vision -->
+        <section class="grid md:grid-cols-2 gap-12 mb-20">
+            <div class="bg-gray-900 p-8 rounded-xl border border-cyan-800">
+                <h2 class="text-3xl font-bold mb-6 neon-cyan">Our Mission</h2>
+                <p class="text-gray-400 leading-relaxed">
+                    To empower organizations with enterprise-grade cybersecurity solutions through proactive defense strategies 
+                    and cutting-edge network protection, ensuring business continuity in an evolving threat landscape.
+                </p>
+            </div>
+
+            <div class="bg-gray-900 p-8 rounded-xl border border-cyan-800">
+                <h2 class="text-3xl font-bold mb-6 neon-cyan">Our Vision</h2>
+                <p class="text-gray-400 leading-relaxed">
+                    To redefine global cybersecurity standards through innovation and expertise, becoming the trusted partner 
+                    for Fortune 500 companies and emerging enterprises alike in their digital transformation journeys.
+                </p>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section class="py-16">
+            <h2 class="text-4xl font-bold mb-16 text-center neon-cyan">OUR TEAM</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+
+                <!-- Team Member 1 -->
+                <div class="team-card bg-gray-900 rounded-xl overflow-hidden hover:shadow-2xl hover:shadow-cyan-900/20 transition-all">
+                    <div class="member-image overflow-hidden">
+                        <img src="images/jimmy.jpg" alt="Jimmy" class="w-full h-64 object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-1">JIMMY JOSEPH OPIO</h3>
+                        <p class="text-cyan-400 text-sm mb-4">Chief Security Officer</p>
+                        <p class="text-gray-400 text-sm">
+                            Founder of Tychicus, experienced in Cybersecurity and consultancy.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div class="team-card bg-gray-900 rounded-xl overflow-hidden hover:shadow-2xl hover:shadow-cyan-900/20 transition-all">
+                    <div class="member-image overflow-hidden">
+                        <img src="images/artisan.jpg" alt="Artisan" class="w-full h-64 object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-1">MAGEMBE RONALD</h3>
+                        <p class="text-cyan-400 text-sm mb-4">Head of Pentesting</p>
+                        <p class="text-gray-400 text-sm">
+                            CCNA, Network administrator, Pentester, Red Teamer, SOC analyst.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Team Member 3
+
+                <div class="team-card bg-gray-900 rounded-xl overflow-hidden hover:shadow-2xl hover:shadow-cyan-900/20 transition-all">
+                    <div class="member-image overflow-hidden">
+                        <img src="images/.jpg" alt="avartar" class="w-full h-64 object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-1"></h3>
+                        <p class="text-cyan-400 text-sm mb-4">Network Architect</p>
+                        <p class="text-gray-400 text-sm">
+                            CCIE, JNCIE certified. Designed secure networks for Fortune 500 companies since 2010.
+                        </p>
+                    </div>
+                </div>-->
+            </div>
+        </section>
+    </main>
+    <footer class="bg-black py-12">
+        <div class="container mx-auto px-6 text-center text-gray-400">
+            <p>&copy; 2023 TYCHICUS. All rights reserved.</p>
+            <div class="mt-4 flex justify-center space-x-6">
+                <a href="#" class="hover:text-cyan-400">Privacy Policy</a>
+                <a href="#" class="hover:text-cyan-400">Terms of Service</a>
+                <a href="#" class="hover:text-cyan-400">Security Compliance</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
