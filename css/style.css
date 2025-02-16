@@ -1,3 +1,10 @@
+
+@layer utilities {
+  .cyber-gradient {
+    background: linear-gradient(135deg, #0a1929 0%, #020c1b 100%);
+  }
+}
+
 .cyber-gradient {
   background: linear-gradient(135deg, #0a1929 0%, #020c1b 100%);
 }
