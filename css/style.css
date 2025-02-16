@@ -17,3 +17,18 @@
         background-size: cover;
     }
 }
+html {
+    scroll-behavior: smooth;
+}
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(10, 25, 41, 0.95);
+    backdrop-filter: blur(10px);
+}
+
+body {
+    padding-top: 76px;
+}
