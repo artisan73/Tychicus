@@ -10,7 +10,7 @@
         color: #00f7ff;
         text-shadow: 0 0 10px rgba(0, 247, 255, 0.5);
     }
-    .bg{
+    .bg-custom{
         background-image: url('/images/cybersecurity2.jpg');
         background-repeat: no-repeat;
         background-position: center;
