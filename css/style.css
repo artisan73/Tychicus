@@ -10,19 +10,14 @@
         color: #00f7ff;
         text-shadow: 0 0 10px rgba(0, 247, 255, 0.5);
     }
-}
-html {
-    scroll-behavior: smooth;
-}
-nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    background: rgba(10, 25, 41, 0.95);
-    backdrop-filter: blur(10px);
-}
-
-body {
-    padding-top: 76px;
+    body {
+        padding-top: 76px;
+    }
+    @keyframes slide-in {
+        from { transform: translateX(-100%); }
+        to { transform: translateX(0); }
+    }
+    .animate-slide-in {
+        animation: slide-in 0.5s ease-out forwards;
+    }
 }
