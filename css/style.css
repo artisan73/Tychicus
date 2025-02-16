@@ -3,24 +3,21 @@
 @tailwind utilities;
 
 @layer utilities {
-  .cyber-gradient {
-    background: linear-gradient(135deg, #0a1929 0%, #020c1b 100%);
-  }
-}
-.cyber-gradient {
-  background: linear-gradient(135deg, #0a1929 0%, #020c1b 100%);
-}
-.neon-cyan {
-  color: #00f7ff;
-  text-shadow: 0 0 10px rgba(0, 247, 255, 0.5);
-}
-.team-card:hover .member-image {
-  transform: scale(1.05);
-  transition: transform 0.3s ease;
-}
-.menu-toggle {
-  transition: all 0.3s ease;
-}
-.service-card:hover .service-icon {
-  filter: drop-shadow(0 0 12px rgba(0, 247, 255, 0.4));
+    .cyber-gradient {
+        background: linear-gradient(135deg, #0a1929 0%, #020c1b 100%);
+    }
+    .neon-cyan {
+        color: #00f7ff;
+        text-shadow: 0 0 10px rgba(0, 247, 255, 0.5);
+    }
+    .service-card:hover .service-icon {
+        filter: drop-shadow(0 0 12px rgba(0, 247, 255, 0.4));
+    }
+    .team-card:hover .member-image {
+        transform: scale(1.05);
+        transition: transform 0.3s ease;
+    }
+    .menu-toggle {
+        transition: all 0.3s ease;
+    }
 }
