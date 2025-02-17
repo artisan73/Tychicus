@@ -8,67 +8,70 @@
     <link href="css/style.css" rel="stylesheet">
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
-<body class="text-gray-100 font-sans">
-    <nav class="fixed w-full z-50 bg-gray-900/95 backdrop-blur-sm border-b border-cyan-900">
+<body class="bg-gray-900 text-gray-100 font-sans">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-gray-900/95 backdrop-blur-md border-b border-cyan-900">
         <div class="container mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
                 <div class="flex items-center space-x-4">
-                    <div class="animate-slide-in">
+                    <div class="w-12 h-12">
                         <lottie-player
                             src="https://assets2.lottiefiles.com/packages/lf20_uzk78jgg.json"
                             background="transparent"
                             speed="1"
-                            style="width: 60px; height: 60px"
+                            style="width: 100%; height: 100%"
                             loop autoplay>
                         </lottie-player>
                     </div>
-                    <span class="text-2xl font-bold neon-cyan">TYCHICUS</span>
+                    <span class="text-2xl font-bold text-cyan-400">TYCHICUS</span>
                 </div>
 
-                <div class="hidden md:flex space-x-8">
-                    <a href="index.html" class="hover:text-cyan-400 transition">Home</a>
-                    <a href="#services" class="hover:text-cyan-400 transition">Services</a>
-                    <a href="#testimonials" class="hover:text-cyan-400 transition">Clients</a>
-                    <a href="about.html" class="hover:text-cyan-400 transition">About</a>
-                    <a href="#contact" class="hover:text-cyan-400 transition">Contact</a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="hover:text-cyan-400 transition-colors">Home</a>
+                    <a href="#services" class="hover:text-cyan-400 transition-colors">Services</a>
+                    <a href="#testimonials" class="hover:text-cyan-400 transition-colors">Clients</a>
+                    <a href="#contact" class="hover:text-cyan-400 transition-colors">Contact</a>
                 </div>
 
                 <button id="mobile-menu-button" class="md:hidden text-cyan-400 hover:text-cyan-300">
-                    <span class="text-3xl">=</span>
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
                 </button>
             </div>
         </div>
 
-        <div id="mobile-menu" class="hidden md:hidden absolute top-20 left-0 w-full bg-gray-900 z-50">
+        <div id="mobile-menu" class="hidden md:hidden absolute top-20 left-0 w-full bg-gray-900 z-50 border-b border-cyan-900">
             <div class="container mx-auto px-6 py-4">
                 <div class="flex flex-col space-y-4">
-                    <a href="index.html" class="text-gray-300 hover:text-cyan-400">Home</a>
+                    <a href="#home" class="text-gray-300 hover:text-cyan-400">Home</a>
                     <a href="#services" class="text-gray-300 hover:text-cyan-400">Services</a>
                     <a href="#testimonials" class="text-gray-300 hover:text-cyan-400">Clients</a>
-                    <a href="about.html" class="text-gray-300 hover:text-cyan-400">About</a>
                     <a href="#contact" class="text-gray-300 hover:text-cyan-400">Contact</a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <section id="home" class="relative min-h-screen flex items-center pt-20">
-        <div class="absolute inset-0 z-0">
-            <div class="absolute inset-0 bg-gradient-to-r from-cyan-900/50 to-gray-900/80"></div>
-            <img src="images/cybersecurity-bg.jpg" 
-                 alt="Cyber Security Background"
-                 class="w-full h-full object-cover"
-                 loading="lazy">
-        </div>
-        
-        <div class="container mx-auto px-6 relative z-10">
-            <div class="flex flex-col md:flex-row items-center">
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-16 md:py-48 bg-gradient-to-b from-gray-900 to-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center justify-between">
                 <div class="md:w-1/2 mb-12 md:mb-0">
-                    <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight neon-cyan">Secure Your Digital Frontier</h1>
-                    <p class="text-xl mb-8 text-gray-300">Advanced cybersecurity solutions for enterprise protection</p>
-                    <button class="bg-cyan-600 hover:bg-cyan-700 text-white px-8 py-3 rounded-lg transition-all transform hover:scale-105">
-                        Request Security Audit
-                    </button>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                        <span class="text-cyan-400">Enterprise-Grade</span> Cybersecurity Solutions
+                    </h1>
+                    <p class="text-lg md:text-xl text-gray-400 mb-8">
+                        Protect your digital assets with military-grade encryption and 24/7 threat monitoring.
+                    </p>
+                    <div class="flex space-x-4">
+                        <button class="bg-cyan-600 hover:bg-cyan-700 text-white px-8 py-3 rounded-lg transition-all">
+                            Schedule Audit
+                        </button>
+                        <button class="border border-cyan-600 text-cyan-400 hover:bg-cyan-900/30 px-8 py-3 rounded-lg transition-all">
+                            Learn More
+                        </button>
+                    </div>
                 </div>
                 <div class="md:w-1/2">
                     <lottie-player
@@ -83,61 +86,62 @@
         </div>
     </section>
 
-    <section id="services" class="py-20 bg-gray-900">
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-gray-800">
         <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold mb-16 text-center neon-cyan">Our Expertise</h2>
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-cyan-400">Our Services</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-gray-800 p-8 rounded-xl transform transition-all hover:-translate-y-2 hover:shadow-2xl hover:shadow-cyan-900/20">
-                    <div class="mb-6">
+                <div class="bg-gray-900 p-8 rounded-xl border border-cyan-900/30 hover:border-cyan-400/50 transition-all">
+                    <div class="w-20 h-20 mb-6 mx-auto">
                         <lottie-player
                             src="https://assets9.lottiefiles.com/packages/lf20_2cwDXD.json"
                             background="transparent"
                             speed="1"
-                            style="width: 80px; height: 80px"
+                            style="width: 100%; height: 100%"
                             loop autoplay>
                         </lottie-player>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4 neon-cyan">Network Security</h3>
-                    <p class="text-gray-400 mb-4">Enterprise-grade network infrastructure protection</p>
-                    <ul class="space-y-2 text-cyan-400">
+                    <h3 class="text-2xl font-bold mb-4 text-center text-cyan-400">Network Security</h3>
+                    <p class="text-gray-400 text-center mb-4">Secure network architecture and infrastructure protection</p>
+                    <ul class="space-y-2 text-cyan-400 text-center">
                         <li>• Zero Trust Architecture</li>
                         <li>• Cloud Security</li>
-                        <li>• DDoS Protection</li>
+                        <li>• DDoS Mitigation</li>
                     </ul>
                 </div>
 
-                <div class="bg-gray-800 p-8 rounded-xl transform transition-all hover:-translate-y-2 hover:shadow-2xl hover:shadow-cyan-900/20">
-                    <div class="mb-6">
+                <div class="bg-gray-900 p-8 rounded-xl border border-cyan-900/30 hover:border-cyan-400/50 transition-all">
+                    <div class="w-20 h-20 mb-6 mx-auto">
                         <lottie-player
                             src="https://assets1.lottiefiles.com/packages/lf20_5tkzkblw.json"
                             background="transparent"
                             speed="1"
-                            style="width: 80px; height: 80px"
+                            style="width: 100%; height: 100%"
                             loop autoplay>
                         </lottie-player>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4 neon-cyan">Threat Intelligence</h3>
-                    <p class="text-gray-400 mb-4">Real-time threat detection & response</p>
-                    <ul class="space-y-2 text-cyan-400">
+                    <h3 class="text-2xl font-bold mb-4 text-center text-cyan-400">Threat Intelligence</h3>
+                    <p class="text-gray-400 text-center mb-4">Real-time threat detection and response solutions</p>
+                    <ul class="space-y-2 text-cyan-400 text-center">
                         <li>• 24/7 Monitoring</li>
                         <li>• Incident Response</li>
                         <li>• Threat Hunting</li>
                     </ul>
                 </div>
 
-                <div class="bg-gray-800 p-8 rounded-xl transform transition-all hover:-translate-y-2 hover:shadow-2xl hover:shadow-cyan-900/20">
-                    <div class="mb-6">
+                <div class="bg-gray-900 p-8 rounded-xl border border-cyan-900/30 hover:border-cyan-400/50 transition-all">
+                    <div class="w-20 h-20 mb-6 mx-auto">
                         <lottie-player
                             src="https://assets2.lottiefiles.com/private_files/lf30_obidsi0t.json"
                             background="transparent"
                             speed="1"
-                            style="width: 80px; height: 80px"
+                            style="width: 100%; height: 100%"
                             loop autoplay>
                         </lottie-player>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4 neon-cyan">Penetration Testing</h3>
-                    <p class="text-gray-400 mb-4">Compliance & vulnerability assessments</p>
-                    <ul class="space-y-2 text-cyan-400">
+                    <h3 class="text-2xl font-bold mb-4 text-center text-cyan-400">Penetration Testing</h3>
+                    <p class="text-gray-400 text-center mb-4">Comprehensive vulnerability assessments</p>
+                    <ul class="space-y-2 text-cyan-400 text-center">
                         <li>• Red Team Exercises</li>
                         <li>• PCI DSS Compliance</li>
                         <li>• Security Audits</li>
@@ -147,12 +151,13 @@
         </div>
     </section>
 
-    <section id="testimonials" class="py-20 bg-black bg-opacity-50">
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 bg-gray-900">
         <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold mb-16 text-center neon-cyan">Client Testimonials</h2>
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-cyan-400">Client Testimonials</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-gray-900 p-8 rounded-xl border border-cyan-900">
-                    <div class="text-cyan-400 text-4xl mb-4">“</div>
+                <div class="bg-gray-800 p-8 rounded-xl">
+                    <div class="text-cyan-400 text-3xl mb-4">“</div>
                     <p class="text-gray-300 mb-6">TYCHICUS implemented a robust security framework that exceeded our expectations.</p>
                     <div class="flex items-center">
                         <img src="images/client1.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
@@ -163,8 +168,8 @@
                     </div>
                 </div>
 
-                <div class="bg-gray-900 p-8 rounded-xl border border-cyan-900">
-                    <div class="text-cyan-400 text-4xl mb-4">“</div>
+                <div class="bg-gray-800 p-8 rounded-xl">
+                    <div class="text-cyan-400 text-3xl mb-4">“</div>
                     <p class="text-gray-300 mb-6">Their penetration testing revealed vulnerabilities we never knew existed.</p>
                     <div class="flex items-center">
                         <img src="images/client2.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
@@ -175,8 +180,8 @@
                     </div>
                 </div>
 
-                <div class="bg-gray-900 p-8 rounded-xl border border-cyan-900">
-                    <div class="text-cyan-400 text-4xl mb-4">“</div>
+                <div class="bg-gray-800 p-8 rounded-xl">
+                    <div class="text-cyan-400 text-3xl mb-4">“</div>
                     <p class="text-gray-300 mb-6">24/7 monitoring gives us peace of mind in our operations.</p>
                     <div class="flex items-center">
                         <img src="images/client3.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
@@ -190,10 +195,11 @@
         </div>
     </section>
 
-    <section class="py-20 bg-gray-900">
+    <!-- Trust Badges -->
+    <section class="py-16 bg-gray-800">
         <div class="container mx-auto px-6">
             <div class="text-center">
-                <h3 class="text-2xl font-bold mb-8 neon-cyan">Trusted By Industry Leaders</h3>
+                <h3 class="text-2xl font-bold mb-8 text-cyan-400">Trusted By Industry Leaders</h3>
                 <div class="flex flex-wrap justify-center items-center gap-12">
                     <img src="images/logos/iso-27001.svg" alt="ISO 27001" class="h-12">
                     <img src="images/logos/cissp.svg" alt="CISSP" class="h-12">
@@ -203,38 +209,53 @@
         </div>
     </section>
 
-    <section id="contact" class="py-20 bg-black bg-opacity-50">
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-900">
         <div class="container mx-auto px-6">
             <div class="max-w-2xl mx-auto">
-                <h2 class="text-4xl font-bold mb-8 text-center neon-cyan">Start Securing Your Business</h2>
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 text-cyan-400">Contact Us</h2>
                 <form class="space-y-6">
-                    <div><input type="text" placeholder="Full Name" class="w-full bg-gray-900 rounded-lg p-4 focus:ring-2 focus:ring-cyan-500 outline-none"></div>
-                    <div><input type="email" placeholder="Business Email" class="w-full bg-gray-900 rounded-lg p-4 focus:ring-2 focus:ring-cyan-500 outline-none"></div>
-                    <div><textarea rows="5" placeholder="Security Requirements" class="w-full bg-gray-900 rounded-lg p-4 focus:ring-2 focus:ring-cyan-500 outline-none"></textarea></div>
-                    <button class="w-full bg-cyan-600 hover:bg-cyan-700 text-white px-8 py-4 rounded-lg transition-all">
-                        Request Consultation
+                    <div>
+                        <input type="text" placeholder="Full Name" 
+                               class="w-full bg-gray-800 rounded-lg p-4 focus:ring-2 focus:ring-cyan-500 outline-none">
+                    </div>
+                    <div>
+                        <input type="email" placeholder="Email Address" 
+                               class="w-full bg-gray-800 rounded-lg p-4 focus:ring-2 focus:ring-cyan-500 outline-none">
+                    </div>
+                    <div>
+                        <textarea rows="5" placeholder="Message" 
+                               class="w-full bg-gray-800 rounded-lg p-4 focus:ring-2 focus:ring-cyan-500 outline-none"></textarea>
+                    </div>
+                    <button class="w-full bg-cyan-600 hover:bg-cyan-700 text-white py-4 rounded-lg transition-all">
+                        Send Secure Message
                     </button>
                 </form>
             </div>
         </div>
     </section>
 
-    <footer class="bg-gray-900 py-12">
-        <div class="container mx-auto px-6 text-center text-gray-400">
-            <div class="flex justify-center mb-8">
-                <lottie-player
-                    src="https://assets2.lottiefiles.com/packages/lf20_uzk78jgg.json"
-                    background="transparent"
-                    speed="1"
-                    style="width: 60px; height: 60px"
-                    loop autoplay>
-                </lottie-player>
-            </div>
-            <p>&copy; 2023 TYCHICUS. All rights reserved.</p>
-            <div class="mt-4 flex justify-center space-x-6">
-                <a href="#" class="hover:text-cyan-400">Privacy Policy</a>
-                <a href="#" class="hover:text-cyan-400">Terms of Service</a>
-                <a href="#" class="hover:text-cyan-400">Compliance</a>
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-12 border-t border-cyan-900/30">
+        <div class="container mx-auto px-6">
+            <div class="text-center">
+                <div class="flex justify-center mb-8">
+                    <div class="w-16 h-16">
+                        <lottie-player
+                            src="https://assets2.lottiefiles.com/packages/lf20_uzk78jgg.json"
+                            background="transparent"
+                            speed="1"
+                            style="width: 100%; height: 100%"
+                            loop autoplay>
+                        </lottie-player>
+                    </div>
+                </div>
+                <div class="flex justify-center space-x-6 mb-8">
+                    <a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors">Compliance</a>
+                </div>
+                <p class="text-gray-400">&copy; 2023 TYCHICUS. All rights reserved.</p>
             </div>
         </div>
     </footer>
