@@ -2,34 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
-    .neon-cyan {
-        color: #00f7ff;
-        text-shadow: 0 0 10px rgba(0, 247, 255, 0.5);
+@layer components {
+    .cyber-glow {
+        box-shadow: 0 0 15px rgba(0, 247, 255, 0.2);
     }
     
-    body {
-        background: #020c1b;
-        padding-top: 76px;
+    .neon-underline {
+        position: relative;
     }
+    
+    .neon-underline::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, #00f7ff, transparent);
+        opacity: 0.5;
+    }
+}
 
-    @keyframes slide-in {
-        from { transform: translateX(-100%); }
-        to { transform: translateX(0); }
-    }
+body {
+    @apply bg-gray-900 text-gray-100;
+}
 
-    .animate-slide-in {
-        animation: slide-in 0.5s ease-out forwards;
-    }
+html {
+    scroll-behavior: smooth;
+}
 
-    .cyber-pattern {
-        background-image: 
-            linear-gradient(to right, rgba(0, 247, 255, 0.05) 1px, transparent 1px),
-            linear-gradient(to bottom, rgba(0, 247, 255, 0.05) 1px, transparent 1px);
-        background-size: 20px 20px;
-    }
+.service-card:hover .service-icon {
+    filter: drop-shadow(0 0 15px rgba(0, 247, 255, 0.3));
+}
 
-    .service-card:hover .service-icon {
-        filter: drop-shadow(0 0 15px rgba(0, 247, 255, 0.3));
-    }
+@keyframes slide-in {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+
+.animate-logo {
+    animation: slide-in 0.5s ease-out forwards;
 }
