@@ -5,27 +5,18 @@ document.addEventListener('DOMContentLoaded', () => {
     if (mobileMenuButton && mobileMenu) {
         mobileMenuButton.addEventListener('click', (e) => {
             e.stopPropagation();
-            const isOpen = mobileMenu.classList.toggle('hidden');
-            mobileMenuButton.innerHTML = isOpen ? '=' : '×';
+            mobileMenu.classList.toggle('hidden');
         });
 
         document.addEventListener('click', (e) => {
             if (!mobileMenu.contains(e.target) && !mobileMenuButton.contains(e.target)) {
                 mobileMenu.classList.add('hidden');
-                mobileMenuButton.innerHTML = '=';
             }
-        });
-
-        mobileMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-                mobileMenuButton.innerHTML = '=';
-            });
         });
     }
 
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
+        anchor.addEventListener('click', function(e) {
             e.preventDefault();
             const target = document.querySelector(this.getAttribute('href'));
             if (target) {
